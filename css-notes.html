@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Notes | Student Study Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Student Study Hub</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="html-notes.html">HTML</a>
+        <a href="css-notes.html" aria-current="page">CSS</a>
+        <a href="quizzes.html">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="notes-layout container">
+    <aside class="toc">
+      <h2>CSS Topics</h2>
+      <a href="#intro">Introduction</a>
+      <a href="#syntax">Syntax</a>
+      <a href="#selectors">Selectors</a>
+      <a href="#box-model">Box Model</a>
+      <a href="#display">Display</a>
+      <a href="#flexbox">Flexbox</a>
+      <a href="#grid">Grid</a>
+      <a href="#position">Positioning</a>
+      <a href="#responsive">Responsive Design</a>
+    </aside>
+
+    <article class="notes-content">
+      <div class="page-title">
+        <span class="eyebrow">Web Development</span>
+        <h1>CSS Notes</h1>
+        <p>Core concepts every beginner should understand.</p>
+      </div>
+
+      <section id="intro" class="note-section">
+        <h2>1. What is CSS?</h2>
+        <p>
+          CSS stands for <strong>Cascading Style Sheets</strong>. It controls colors, spacing,
+          typography, layout and responsive behavior of HTML elements.
+        </p>
+        <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+        <p>Place this link inside the HTML <code>head</code> to connect an external stylesheet.</p>
+      </section>
+
+      <section id="syntax" class="note-section">
+        <h2>2. CSS Syntax</h2>
+        <pre><code>p {
+  color: #222;
+  font-size: 16px;
+}</code></pre>
+        <p>
+          <strong>p</strong> is the selector, <strong>color</strong> and <strong>font-size</strong>
+          are properties, and the values define the styles.
+        </p>
+      </section>
+
+      <section id="selectors" class="note-section">
+        <h2>3. Common Selectors</h2>
+        <pre><code>p { }          /* element selector */
+.note { }      /* class selector */
+#title { }     /* id selector */
+nav a { }      /* descendant selector */
+button:hover { } /* pseudo-class */</code></pre>
+        <div class="key-point"><strong>Tip:</strong> Prefer reusable classes for styling. IDs are useful for unique page targets and anchors.</div>
+      </section>
+
+      <section id="box-model" class="note-section">
+        <h2>4. CSS Box Model</h2>
+        <p>Every element can be thought of as a rectangular box with four layers:</p>
+        <div class="chip-row">
+          <span>Content</span><span>Padding</span><span>Border</span><span>Margin</span>
+        </div>
+        <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+        <p>
+          <code>border-box</code> makes width calculations easier because padding and border are
+          included inside the declared width.
+        </p>
+      </section>
+
+      <section id="display" class="note-section">
+        <h2>5. Display</h2>
+        <ul>
+          <li><code>block</code>: starts on a new line and usually fills available width.</li>
+          <li><code>inline</code>: stays in the same line and uses only needed width.</li>
+          <li><code>inline-block</code>: inline placement with width/height support.</li>
+          <li><code>none</code>: removes the element from layout.</li>
+        </ul>
+      </section>
+
+      <section id="flexbox" class="note-section">
+        <h2>6. Flexbox</h2>
+        <p>Flexbox is useful for one-dimensional layouts: row or column.</p>
+        <pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}</code></pre>
+        <p>
+          <code>justify-content</code> controls the main axis. <code>align-items</code> controls the cross axis.
+        </p>
+      </section>
+
+      <section id="grid" class="note-section">
+        <h2>7. CSS Grid</h2>
+        <p>Grid is useful for two-dimensional layouts with rows and columns.</p>
+        <pre><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}</code></pre>
+      </section>
+
+      <section id="position" class="note-section">
+        <h2>8. Positioning</h2>
+        <ul>
+          <li><code>static</code>: default positioning.</li>
+          <li><code>relative</code>: keeps normal space and can be offset.</li>
+          <li><code>absolute</code>: positioned relative to a positioned ancestor.</li>
+          <li><code>fixed</code>: stays relative to the viewport.</li>
+          <li><code>sticky</code>: behaves normally until a scroll threshold is reached.</li>
+        </ul>
+      </section>
+
+      <section id="responsive" class="note-section">
+        <h2>9. Responsive Design</h2>
+        <p>Responsive pages adapt to different screen sizes.</p>
+        <pre><code>@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+        <div class="key-point"><strong>Remember:</strong> Avoid fixed page widths. Use flexible units such as %, rem, fr and max-width.</div>
+      </section>
+
+      <div class="next-box">
+        <div>
+          <strong>Practice time</strong>
+          <p>Test the concepts from both HTML and CSS.</p>
+        </div>
+        <a class="btn primary" href="quizzes.html">Open Quiz →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Student Study Hub</p>
+      <p>CSS Notes</p>
+    </div>
+  </footer>
+</body>
+</html>

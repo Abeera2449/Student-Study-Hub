@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Notes | Student Study Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Student Study Hub</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="html-notes.html" aria-current="page">HTML</a>
+        <a href="css-notes.html">CSS</a>
+        <a href="quizzes.html">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="notes-layout container">
+    <aside class="toc">
+      <h2>HTML Topics</h2>
+      <a href="#intro">Introduction</a>
+      <a href="#structure">Page Structure</a>
+      <a href="#text">Text Elements</a>
+      <a href="#links-images">Links & Images</a>
+      <a href="#lists">Lists</a>
+      <a href="#tables">Tables</a>
+      <a href="#forms">Forms</a>
+      <a href="#semantic">Semantic HTML</a>
+      <a href="#best-practices">Best Practices</a>
+    </aside>
+
+    <article class="notes-content">
+      <div class="page-title">
+        <span class="eyebrow">Web Development</span>
+        <h1>HTML Notes</h1>
+        <p>Beginner-friendly revision notes with examples.</p>
+      </div>
+
+      <section id="intro" class="note-section">
+        <h2>1. What is HTML?</h2>
+        <p>
+          HTML stands for <strong>HyperText Markup Language</strong>. It is used to define the
+          structure and content of a web page. HTML is a markup language, not a programming language.
+        </p>
+        <div class="key-point"><strong>Remember:</strong> HTML = structure, CSS = appearance.</div>
+      </section>
+
+      <section id="structure" class="note-section">
+        <h2>2. Basic HTML Page Structure</h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <ul>
+          <li><code>&lt;!DOCTYPE html&gt;</code> tells the browser to use modern HTML.</li>
+          <li><code>&lt;head&gt;</code> contains metadata, title and links to stylesheets.</li>
+          <li><code>&lt;body&gt;</code> contains visible page content.</li>
+        </ul>
+      </section>
+
+      <section id="text" class="note-section">
+        <h2>3. Headings and Text</h2>
+        <p>HTML provides six heading levels: <code>h1</code> to <code>h6</code>.</p>
+        <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;strong&gt;Important text&lt;/strong&gt;
+&lt;em&gt;Emphasized text&lt;/em&gt;</code></pre>
+        <div class="key-point"><strong>Tip:</strong> Use one clear <code>h1</code> for the main page topic, then use lower heading levels in order.</div>
+      </section>
+
+      <section id="links-images" class="note-section">
+        <h2>4. Links and Images</h2>
+        <pre><code>&lt;a href="https://example.com"&gt;Visit Website&lt;/a&gt;
+
+&lt;img src="student.jpg" alt="Student studying at a desk"&gt;</code></pre>
+        <p>
+          The <code>href</code> attribute gives a link destination. The <code>src</code> attribute
+          gives an image path. The <code>alt</code> attribute describes an image for accessibility
+          and also appears if the image fails to load.
+        </p>
+      </section>
+
+      <section id="lists" class="note-section">
+        <h2>5. Lists</h2>
+        <div class="two-col">
+          <div>
+            <h3>Unordered List</h3>
+            <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </div>
+          <div>
+            <h3>Ordered List</h3>
+            <pre><code>&lt;ol&gt;
+  &lt;li&gt;Read topic&lt;/li&gt;
+  &lt;li&gt;Practice&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="tables" class="note-section">
+        <h2>6. Tables</h2>
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Subject&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;HTML&lt;/td&gt;
+    &lt;td&gt;85&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <p><code>th</code> is used for header cells and <code>td</code> for normal data cells.</p>
+      </section>
+
+      <section id="forms" class="note-section">
+        <h2>7. Forms</h2>
+        <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name&lt;/label&gt;
+  &lt;input id="name" type="text" name="name"&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" type="email" name="email"&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <p>
+          Forms collect user input. Common input types include <code>text</code>, <code>email</code>,
+          <code>password</code>, <code>radio</code>, <code>checkbox</code> and <code>date</code>.
+        </p>
+        <div class="key-point"><strong>Important:</strong> A form can be displayed using only HTML/CSS, but saving submitted data needs a backend or external form service.</div>
+      </section>
+
+      <section id="semantic" class="note-section">
+        <h2>8. Semantic HTML</h2>
+        <p>
+          Semantic elements describe the purpose of content. They make pages easier to understand,
+          maintain and navigate.
+        </p>
+        <div class="chip-row">
+          <span>header</span><span>nav</span><span>main</span><span>section</span>
+          <span>article</span><span>aside</span><span>footer</span>
+        </div>
+      </section>
+
+      <section id="best-practices" class="note-section">
+        <h2>9. Best Practices</h2>
+        <ul class="check-list">
+          <li>Use semantic elements where appropriate.</li>
+          <li>Add meaningful alt text to informative images.</li>
+          <li>Use labels with form controls.</li>
+          <li>Keep heading levels logical.</li>
+          <li>Indent code consistently.</li>
+          <li>Use lowercase file names without spaces for simpler URLs.</li>
+        </ul>
+      </section>
+
+      <div class="next-box">
+        <div>
+          <strong>Next topic</strong>
+          <p>Learn how CSS changes the appearance and layout of your HTML.</p>
+        </div>
+        <a class="btn primary" href="css-notes.html">CSS Notes →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Student Study Hub</p>
+      <p>HTML Notes</p>
+    </div>
+  </footer>
+</body>
+</html>
