@@ -1,0 +1,2 @@
+Put your intro/profile photo in this folder and rename it to: profile.jpg
+The CSS uses object-fit: cover so it fills the full card cleanly.
