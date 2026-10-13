@@ -1,32 +1,30 @@
-# Student Study Hub — Updated Version
+STUDENT STUDY HUB — REVISED
 
-## Included
-- HTML, CSS, JavaScript, Python, C++, Java, Databases & SQL, AI, Computer Networks notes
-- Separate 20-MCQ quiz for every subject
-- 50-MCQ mixed quiz
-- 100-MCQ mixed quiz
-- JavaScript added to homepage intro/course focus
-- Animated cards and reveal effects
-- Responsive navigation
-- Searchable notes
-- Quiz scoring + answer review
-- Email and LinkedIn contact
-- Renamed practice section: "Practice MCQs from this course like a paper"
+IMPORTANT:
+Keep these existing GitHub items:
+- data.js
+- assets/profile.jpg
 
-## Profile image
-Put your existing intro image in `assets/profile.jpg`.
-The page uses `object-fit: cover`, so the photo fills the box cleanly.
+Replace/upload these files from this ZIP:
+- index.html
+- style.css
+- script.js
+- notes.html
+- quizzes.html
+- contact.html
+- html-notes.html
+- css-notes.html
+- javascript-notes.html
+- lectures.js (NEW)
 
-## GitHub Pages deployment
-Yes, the files already uploaded to GitHub need to be updated/replaced.
-
-Recommended:
-1. Download/backup your current repository first.
-2. Replace/upload: `index.html`, `style.css`, `script.js`, `data.js`, `notes.html`, `quizzes.html`, `contact.html`.
-3. Upload the `assets` folder and put your photo at `assets/profile.jpg`.
-4. Keep `index.html` in the repository root.
-5. Commit the changes. GitHub Pages will publish the updated version automatically from the configured branch/folder.
-
-Compatibility redirect files for `html-notes.html` and `css-notes.html` are included.
-No npm install or build step is required.
-
+Fixes:
+- Proper lecture-style notes for every subject
+- HTML/CSS code examples display as code instead of breaking the page
+- Personal Abeera intro restored
+- Existing assets/profile.jpg used on homepage and contact page
+- Visible card/box animations
+- Midterm Practice and Final Exam Practice labels
+- Centered footer
+- Unified Student Study Hub navbar color
+- Redesigned contact page with Email, LinkedIn and Portfolio
+- Keeps your existing 20-per-subject, 50 mixed and 100 mixed quiz bank from data.js
